@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aligned Fan Replacement Dashboard</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Login Section -->
+        <div id="loginSection" class="login-section">
+            <div class="login-card">
+                <h2>Admin Access Required</h2>
+                <p>Please sign in to access the dashboard.</p>
+                <button id="loginButton">Sign in with Google</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" style="display: none">
+            <div class="dashboard-header">
+                <h1>Data Center Fan Replacement Dashboard</h1>
+                <button id="signOutButton" class="logout-button">
+                    Sign Out
+                </button>
+            </div>
+
+            <div class="stats-container" id="sitesGrid"></div>
+
+            <!-- Add Site Form -->
+            <div class="dashboard-card">
+                <h2>Add New Fan Replacement</h2>
+                <form id="addSiteForm">
+                    <div class="form-group">
+                        <label for="siteName">Site Name:</label>
+                        <input type="text" id="siteName" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="totalFans">Fans Replaced:</label>
+                        <input type="number" id="totalFans" required min="1" />
+                    </div>
+                    <button type="submit">Add Site</button>
+                </form>
+            </div>
+        </div>
+
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
